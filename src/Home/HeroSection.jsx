@@ -27,7 +27,7 @@ const HeroSection = () => {
       Shop the latest Apple products and accessories, delivered fast and backed by trust. That's how we do things at NovaTech.
     </p>
 
-    <Link to="/" className="px-15 py-4 md:py-5 rounded-lg font-semibold text-[#0B0B0B] bg-[#D79B63] hover:bg-[#E8AF78] transition duration-300 ">
+    <Link to="/shop" className="px-15 py-4 md:py-5 rounded-lg font-semibold text-[#0B0B0B] bg-[#D79B63] hover:bg-[#E8AF78] transition duration-300 ">
     Explore Now
     </Link>
   </div>

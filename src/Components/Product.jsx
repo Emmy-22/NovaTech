@@ -15,8 +15,9 @@ const Product = ({ image, title, price, addToCart, product, isFavourite, toggleF
       }`}
        />
       </div>
-      <div className="flex gap-1 text-[#D79B63] mt-3 mb-3">
+      <div className="flex gap-1 text-[#D79B63] mt-3 mb-3 items-center ">
         {[...Array(5)].map((_, i) => <FaStar key={i} />)}
+        <span className='text-white'>5.0</span>
       </div>
       <div className="flex justify-between mb-3">
         <h1 className="text-white font-semibold">{title}</h1>

@@ -4,15 +4,15 @@ import Product from '../Components/Product';
 import { FaGreaterThan } from 'react-icons/fa';
 
 
-const Shop = ({ favourites, toggleFavourite, addToCart }) => {
+const Shop = ({ Favourites, toggleFavourite, addToCart }) => {
      const tabs = ["Phones", "Laptops", "Watches"];
 
     const productsByTab = {
     Phones: [
       { title: "iPhone 17 pro max", price: "$200", image: "/I17.jpg" },
       { title: "iPhone 16 pro max", price: "$180", image: "/1616pm.jpg" },
-      { title: "iPhone 11 pro max", price: "$210", image: "/111111.jpg" },
-      { title: "iPhone 15 pro", price: "$210", image: "/15pm.jpg" }
+      { title: "iPhone 11 pro max", price: "$210", image: "/11ppm.jpg" },
+      { title: "iPhone 13 pro", price: "$210", image: "/13pm.jpg" }
     ],
     Laptops: [
       { title: "MacBook Air M3", price: "$900", image: "/Air M3.jpg" },
@@ -76,7 +76,7 @@ const Shop = ({ favourites, toggleFavourite, addToCart }) => {
   image={product.image}
   title={product.title}
   price={product.price}
-  isFavourite={favourites.includes(product.title)}
+  isFavourite={Favourites.includes(product.title)}
   toggleFavourite={toggleFavourite}
   product={product}
   addToCart={addToCart}
