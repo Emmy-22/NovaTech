@@ -33,10 +33,12 @@ const decreaseQuantity = (title) => {
 
  const navigate = useNavigate();
 
-  const delivery = 3;
-  const taxes = 2;
-  const discount = 38;
-  const service = 1;
+  const hasItems = cartItems.length > 0;
+
+  const delivery = hasItems ? 3 : 0;
+  const taxes = hasItems ? 2 : 0;
+  const discount = hasItems ? 38 : 0;
+  const service = hasItems ? 1 : 0;
   const total = subtotal + delivery + taxes - discount + service;
 
   return (
@@ -65,7 +67,6 @@ const decreaseQuantity = (title) => {
                     src={item.image}
                     alt={item.title}
                     className="w-30 h-30 object-cover rounded-md"
-                    
                   />
                   <div className="flex flex-col gap-2">
                     <h3 className="font-semibold">{item.title}</h3>

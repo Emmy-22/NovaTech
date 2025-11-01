@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { FaStar } from "react-icons/fa";
 
 const testimonials = [
@@ -37,7 +37,7 @@ const testimonials = [
 ];
 
 const Testimonial = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  
 
   return (
     <div id="Testimonial" className="bg-[#1a1a1a] min-h-[65vh]  py-20 px-3 md:px-15">
@@ -51,12 +51,7 @@ const Testimonial = () => {
       {/* Testimonial Cards */}
       <div
         className="overflow-x-auto flex gap-5 scroll-smooth mt-6 pb-6"
-        onScroll={(e) => {
-          const scrollPos = e.target.scrollLeft;
-          const cardWidth = e.target.firstChild.offsetWidth + 20; // width + gap
-          const index = Math.round(scrollPos / cardWidth);
-          setActiveIndex(index);
-        }}
+        
       >
         {testimonials.map((t, i) => (
           <div
@@ -90,17 +85,7 @@ const Testimonial = () => {
         ))}
       </div>
 
-      {/* Indicator Dots */}
-      <div className="flex justify-center mt-10 gap-3">
-        {testimonials.map((_, i) => (
-          <div
-            key={i}
-            className={`w-[10px] h-[4px] rounded-full ${
-              i === activeIndex ? "bg-[#D79B63] w-[25px]" : "bg-white/40"
-            }`}
-          ></div>
-        ))}
-      </div>
+      
     </div>
   );
 };

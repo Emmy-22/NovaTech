@@ -3,8 +3,8 @@ import { FaHeart, FaStar } from 'react-icons/fa'
 
 const Product = ({ image, title, price, addToCart, product, isFavourite, toggleFavourite }) => {
   return (
-       <div className="relative bg-[#1e1e1e] rounded-xl p-5 h-[400px] shadow-[0_4px_20px_rgba(0,0,0,0.2)] w-full sm:w-[270px]">
-      <img src={image} alt={title} className="w-full h-[250px] rounded-[5px]" />
+       <div className="relative bg-[#1e1e1e] rounded-xl p-5 h-[560px] md:h-[400px] shadow-[0_4px_20px_rgba(0,0,0,0.2)] w-full sm:w-[270px]">
+      <img src={image} alt={title} className="w-full h-[400px] md:h-[250px] rounded-[5px]" />
       <div 
       onClick={() => toggleFavourite(title)}
      className="absolute top-2 right-2 bg-[#D79B63] text-white p-2 rounded-4xl cursor-pointer"

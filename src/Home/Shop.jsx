@@ -15,10 +15,10 @@ const Shop = ({ Favourites, toggleFavourite, addToCart }) => {
       { title: "iPhone 13 pro", price: "$210", image: "/13pm.jpg" }
     ],
     Laptops: [
-      { title: "MacBook Air M3", price: "$900", image: "/Air M3.jpg" },
+      { title: "MacBook Air M3", price: "$900", image: "/imac pro.jpg" },
       { title: "MacBook Pro 16-inch", price: "$850", image: "/16Inches.webp" },
       { title: "iMac 24-inch (M3)", price: "$950", image: "/24inches.jpg" },
-      { title: "MacBook Pro 14", price: "$950", image: "/MacBook Pro 14.jpg" }
+      { title: "MacBook Pro 14", price: "$950", image: "/MacBook Air m2.jpg" }
     ],
     Watches: [
       { title: "Apple Watch Series 9", price: "$350", image: "/series 9.webp" },
