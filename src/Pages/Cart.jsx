@@ -133,7 +133,8 @@ const decreaseQuantity = (title) => {
           </div>
 
           <button
-            onClick={() => window.location.href = "/checkout"}
+            onClick={() => navigate("/checkout", { state: { total }})}
+            disabled={cartItems.length === 0}
             className="w-full bg-[#D79B63] mt-4 py-2 rounded-md font-semibold text-black hover:bg-[#e0a974] transition"
           >
             Checkout →
