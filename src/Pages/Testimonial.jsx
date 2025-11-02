@@ -67,7 +67,7 @@ const Testimonial = () => {
                 />
               </div>
               <div className="flex flex-col justify-center mt-2 mr-8">
-                <h2 className="font-semibold text-[17px]">{t.name}</h2>
+                <h2 className="font-semibold text-[17px] text-black">{t.name}</h2>
                 <p className="text-gray-800">{t.role}</p>
                 <div className="flex gap-1 text-[#D79B63] mt-1 mb-3 items-center">
                   {[...Array(t.rating)].map((_, i) => (
