@@ -7,10 +7,16 @@ import Admin from "./Pages/Admin";
 import ShopPage from "./Pages/ShopPage";
 import Footer from "./Components/Footer";
 import Favourite from "./Pages/Favourite";
+import "./App.css"
+
+
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   const [Favourites, setFavourites] = useState([]);
   const [cartItems, setCartItems] = useState([]);
+
 
   const toggleFavourite = (title) => {
     setFavourites((prev) =>
@@ -20,6 +26,7 @@ const App = () => {
     );
   };
 
+ 
   const addToCart = (product) => {
     setCartItems((prev) => {
       const existingItem = prev.find((item) => item.title === product.title);
@@ -35,12 +42,13 @@ const App = () => {
     });
   };
 
+
   const removeFromCart = (title) => {
     setCartItems((prev) => prev.filter((item) => item.title !== title));
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-[#121212] text-white min-h-screen">
       <Routes>
         <Route
           path="/home"
@@ -64,21 +72,46 @@ const App = () => {
             />
           }
         />
-        <Route path="/cart" element={<Cart cartItems={cartItems} removeFromCart={removeFromCart} setCartItems={setCartItems}  Favourites={Favourites}/>} />
+        <Route
+          path="/cart"
+          element={
+            <Cart
+              cartItems={cartItems}
+              removeFromCart={removeFromCart}
+              setCartItems={setCartItems}
+              Favourites={Favourites}
+            />
+          }
+        />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/admin" element={<Admin />} />
         <Route
-         path="/favourite" 
-         element={<Favourite 
-         Favourites={Favourites}
-         toggleFavourite={toggleFavourite}
-         addToCart={addToCart}
-         cartItems={cartItems}
-         />}
-          />
+          path="/favourite"
+          element={
+            <Favourite
+              Favourites={Favourites}
+              toggleFavourite={toggleFavourite}
+              addToCart={addToCart}
+              cartItems={cartItems}
+            />
+          }
+        />
         <Route path="/*" element={<Navigate to="/home" />} />
       </Routes>
+
       <Footer />
+
+      
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="dark" 
+        toastClassName="toast-custom"
+      />
     </div>
   );
 };
